@@ -25,8 +25,8 @@ async def webhook(request: Request):
     
     # Extract parameters (with fallback values if not found)
     parameters = req_data.get("queryResult", {}).get("parameters", {})
-    origin = parameters.get("origin", "Unknown")  # Default to 'Unknown' if not found
-    destination = parameters.get("destination", "Unknown")  # Default to 'Unknown' if not found
+    origin = parameters.get("origin", "India")  # Default to 'Unknown' if not found
+    destination = parameters.get("destination", "USA")  # Default to 'Unknown' if not found
     
     # Get the shipping rate based on origin and destination
     shipping_rate = get_shipping_rate(origin, destination)
