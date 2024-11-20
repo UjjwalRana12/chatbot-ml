@@ -10,6 +10,7 @@ def get_shipping_rate(source, destination):
         ("India", "USA"): "$50",
         ("India", "Canada"): "$55",
         ("India", "Germany"): "$60",
+        
        
     }
     return shipping_rates.get((source, destination), "Shipping rates not available for this route.")
