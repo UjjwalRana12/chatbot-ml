@@ -15,6 +15,10 @@ def get_shipping_rate(source, destination):
     }
     return shipping_rates.get((source, destination), "Shipping rates not available for this route.")
 
+@app.get("/")
+async def get_requet():
+     return {"message": "this is the get request"}
+
 @app.post("/webhook")
 async def webhook(request: Request):
     req_data = await request.json()
